@@ -1,0 +1,14 @@
+{
+  "name": "YatestTask",
+  "type": "module",
+  "devDependencies": {
+    "@wdio/cli": "^9.2.4",
+    "@wdio/cucumber-framework": "^9.2.2",
+    "@wdio/local-runner": "^9.2.4",
+    "@wdio/types": "^9.2.2",
+    "@wdio/visual-service": "^6.2.1"
+  },
+  "dependencies": {
+    "YatestTask": "file:"
+  }
+}
