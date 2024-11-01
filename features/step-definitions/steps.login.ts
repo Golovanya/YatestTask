@@ -12,7 +12,7 @@ Given(/^I'm on the (.+) page$/, async (page) => {
 });
 
 
-When(/^I fill form with  (.+) and (.+)$/, async (username, password) => {
+When(/^I fill form with  (.+) and (.+)$/, async (username:string, password:string) => {
     await LoginPage.fillFields(username, password);
 });
 
@@ -27,7 +27,7 @@ When(/^I click submit button$/, async () => {
 });
 
 
-Then(/^I should see a flash message saying (.+)$/, async (message) => {
+Then(/^I should see a flash message saying (.+)$/, async (message:string) => {
     await expect(SecurePage.flashAlert).toBeExisting();
     await expect(SecurePage.flashAlert).toHaveText(expect.stringContaining(message));
 });

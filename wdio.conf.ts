@@ -25,6 +25,18 @@ export const config: WebdriverIO.Config = {
     specs: [
         './features/**/*.feature'
     ],
+    suites:{
+        positive: [
+            './features/positiveCases/login.positive.feature',
+            './features/positiveCases/afterlogout.positive.feature',
+            './features/positiveCases/closebanner.positive.feature',
+            './features/positiveCases/correctPage.positive.feature',
+            './features/positiveCases/enterlogin.positive.feature',
+            './features/positiveCases/logout.positive.feature'
+
+        ],
+        negative: ['./features/negativeCases/login.negative.feature']
+    },
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'

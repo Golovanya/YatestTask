@@ -10,5 +10,10 @@
   },
   "dependencies": {
     "YatestTask": "file:"
+  },
+  "scripts": {
+    "test:positive": "npx wdio wdio.conf.ts --suite positive",
+    "test:negative": "npx wdio wdio.conf.ts --suite negative",
+    "test:all": "npx wdio"
   }
 }

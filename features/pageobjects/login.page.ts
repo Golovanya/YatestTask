@@ -1,13 +1,8 @@
 import { browser, $ } from '@wdio/globals'
 import Page from './page.js';
 
-/**
- * sub page containing specific selectors and methods for a specific page
- */
 class LoginPage extends Page {
-    /**
-     * define selectors uc      sing getter methods
-     */
+    // Получаем элементы на странице
     public get inputUsername () {
         return $('#username');
     }
@@ -28,7 +23,10 @@ class LoginPage extends Page {
         return $('a.close')
     }
 
+    // методы  для тестов
+
     public async closeBaner () {
+    // прячу баннер форка на гитхаб, он мешает кликнуть по баннеру
         await browser.execute(() => {
             const overlayImage = document.querySelector('img[src="/img/forkme_right_green_007200.png"]');
             if (overlayImage instanceof HTMLElement) {
@@ -51,9 +49,7 @@ class LoginPage extends Page {
         await this.inputPassword.click()
         await browser.keys("Enter")
     }
-    /**
-     * overwrite specific options to adapt it to page object
-     */
+   
     public open () {
         return super.open('login');
     }
