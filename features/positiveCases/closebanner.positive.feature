@@ -1,8 +1,8 @@
 Feature: Banners functionality
 
-  Scenario Outline: Banner will not visible after closing
-    Given User is on the login page
-    When I fill form with valid <username> and <password>
+  Scenario Outline: The banner will be invisible after closing
+    Given I'm on the login page
+    When I fill form with  <username> and <password>
     And I click submit button
     And I should see a flash message saying <message>
     When I click  close banner

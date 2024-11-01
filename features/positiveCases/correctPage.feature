@@ -1,5 +1,6 @@
-Feature: The Internet Guinea Pig Website
+Feature: Correct page display
 
-  Scenario Outline: Check login with valid values
-    Given User is on the login page
+
+  Scenario Outline: The site shows input fields and a submit button
+    Given I'm on the login page
     Then inputs and submit button is visible

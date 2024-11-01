@@ -2,8 +2,8 @@ Feature: Logout functionality
 
   Scenario Outline: After logout fields username and password are empty
 
-    Given User is on the login page
-    When I fill form with valid <username> and <password>
+    Given I'm on the login page
+    When I fill form with  <username> and <password>
     And I click submit button
     And I should see a flash message saying <message>
     When I click to logout button

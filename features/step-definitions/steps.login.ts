@@ -7,12 +7,12 @@ const pages = {
     login: LoginPage
 };
 
-Given(/^User is on the (.+) page$/, async (page) => {
+Given(/^I'm on the (.+) page$/, async (page) => {
     await pages[page].open();
 });
 
 
-When(/^I fill form with valid (.+) and (.+)$/, async (username, password) => {
+When(/^I fill form with  (.+) and (.+)$/, async (username, password) => {
     await LoginPage.fillFields(username, password);
 });
 

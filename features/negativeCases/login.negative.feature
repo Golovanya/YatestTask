@@ -1,8 +1,8 @@
 Feature: Logout functionality
 
-  Scenario Outline: Check login with valid values
-    Given User is on the login page
-    When I fill form with valid <username> and <password>
+  Scenario Outline: Сheck login with incorrect data
+    Given I'm on the login page
+    When I fill form with  <username> and <password>
     And I click submit button
     Then I should see a flash message saying <message>
 

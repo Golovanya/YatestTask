@@ -25,11 +25,18 @@ class LoginPage extends Page {
     }
 
     public get closebtn () {
-        return $('.close')
+        return $('a.close')
     }
 
     public async closeBaner () {
-        await this.closebtn.click()
+        await browser.execute(() => {
+            const overlayImage = document.querySelector('img[src="/img/forkme_right_green_007200.png"]');
+            if (overlayImage instanceof HTMLElement) {
+                overlayImage.style.visibility = 'hidden';
+            }
+        });
+        await this.closebtn.scrollIntoView();
+        await this.closebtn.click();
     }
 
     public async fillFields (username: string, password: string) {
